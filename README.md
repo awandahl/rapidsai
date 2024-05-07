@@ -59,3 +59,36 @@ Check token of running Jupyter Notebook server
 ````
 docker logs 9dbd6b850b5c
 ````
+
+
+
+
+
+
+
+
+
+
+
+Saving the Docker Image Locally:
+After successfully building your Docker image, tag it with a version or name that you want to save it as:
+bash
+Copy code
+docker tag <image_id> your_username/image_name:tag
+Replace <image_id> with the ID of your Docker image (you can find it using docker images), your_username with your Docker Hub username, image_name with the name you want to give to your image, and tag with a version tag (e.g., latest).
+Save the tagged Docker image to a .tar file:
+bash
+Copy code
+docker save -o image_name.tar your_username/image_name:tag
+Replace image_name.tar with the desired filename for your saved Docker image.
+Pushing the Docker Image to Docker Hub:
+Log in to Docker Hub from the command line:
+bash
+Copy code
+docker login
+Enter your Docker Hub username and password when prompted.
+Push the tagged Docker image to your Docker Hub repository:
+bash
+Copy code
+docker push your_username/image_name:tag
+This command will upload your Docker image to Docker Hub.
