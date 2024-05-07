@@ -1,5 +1,17 @@
 # rapidsai
 
+````
+docker pull rapidsai/rapidsai:23.06-cuda11.8-runtime-ubuntu22.04-py3.10
+```` 
+
+````
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+-v /home/aw/docker/rapidsai:/rapids/notebooks \
+rapidsai/rapidsai:23.06-cuda11.8-runtime-ubuntu22.04-py3.10
+````
+
+
+
 One popular option for text mining with GPU support is the rapidsai/rapidsai Docker image. Rapids.ai provides a suite of libraries that leverage GPU acceleration for data science and analytics tasks, including text mining. Here's how you can use it:
 
 Pull the Rapids.ai Docker Image:
