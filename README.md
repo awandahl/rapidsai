@@ -60,3 +60,8 @@ docker run --gpus all -p 8888:8888 textmining-gpu-jupyter
 Check token of running Jupyter Notebook server
 ````
 docker logs 9dbd6b850b5c
+````
+Bind home directory to running container
+````
+docker run --gpus all -d -p 8888:8888 -v /home/aw/docker/jupyter_text:/notebooks textmining-gpu-jupyter
+´´´´
