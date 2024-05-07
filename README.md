@@ -62,6 +62,12 @@ docker logs 9dbd6b850b5c
 
 
 
+ERROR: spacy 3.3.3 has requirement typer<0.5.0,>=0.3.0, but you'll have typer 0.9.4 which is incompatible.
+ERROR: spacy 3.3.3 has requirement typing-extensions<4.6.0,>=3.7.4.1, but you'll have typing-extensions 4.11.0 which is incompatible.
+ERROR: scispacy 0.5.4 has requirement spacy<3.8.0,>=3.7.0, but you'll have spacy 3.3.3 which is incompatible.
+ERROR: en-core-web-md 3.7.1 has requirement spacy<3.8.0,>=3.7.2, but you'll have spacy 3.3.3 which is incompatible.
+ERROR: botocore 1.34.99 has requirement urllib3<1.27,>=1.25.4; python_version < "3.10", but you'll have urllib3 2.2.1 which is incompatible.
+ERROR: cached-path 1.1.6 has requirement huggingface-hub<0.11.0,>=0.8.1, but you'll have huggingface-hub 0.23.0 which is incompatible.
 
 
 
