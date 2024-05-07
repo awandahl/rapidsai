@@ -1,7 +1,5 @@
 # rapidsai
 
-https://hub.docker.com/layers/nvidia/cuda/11.0.3-cudnn8-devel/images/sha256-38e7e686e51505671388db2c47f854db0ad73c93b8faa3cdd1bfc14e8f29bd7a?context=explore  
-
 Dockerfile:
 ````
 # Use the selected official CUDA development image
@@ -50,18 +48,14 @@ CMD ["jupyter", "lab", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--allow
 ````
 Building docker container:
 ````
-docker build -t textmining-gpu-jupyter .
+docker build -t tj .
 ````
-Running container
+Running container detached and bind container to home directory
 ````
-docker run --gpus all -p 8888:8888 textmining-gpu-jupyter
+docker run --gpus all -d -p 8888:8888 -v /home/aw/docker/tj:/notebooks tj
 ````
 
 Check token of running Jupyter Notebook server
 ````
 docker logs 9dbd6b850b5c
 ````
-Bind home directory to running container
-````
-docker run --gpus all -d -p 8888:8888 -v /home/aw/docker/jupyter_text:/notebooks textmining-gpu-jupyter
-´´´´
